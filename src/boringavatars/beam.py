@@ -5,17 +5,20 @@ SIZE = 36
 
 def generate_data(name, colors):
     num_from_name = hash(name)
-    range = colors and len(colors)
-    wrapper_color = get_random_color(num_from_name, colors, range)
+    wrapper_color = get_random_color(num_from_name, colors, len(colors))
     pre_translate_x = get_unit(num_from_name, 10, 1)
-    wrapper_translate_x = pre_translate_x + SIZE / 9 if pre_translate_x < 5 else pre_translate_x
+    wrapper_translate_x = (
+        pre_translate_x + SIZE / 9 if pre_translate_x < 5 else pre_translate_x
+    )
     pre_translate_y = get_unit(num_from_name, 10, 2)
-    wrapper_translate_y = pre_translate_y + SIZE / 9 if pre_translate_y < 5 else pre_translate_y
+    wrapper_translate_y = (
+        pre_translate_y + SIZE / 9 if pre_translate_y < 5 else pre_translate_y
+    )
 
     return {
         "wrapper_color": wrapper_color,
         "face_color": get_contrast(wrapper_color),
-        "background_color": get_random_color(num_from_name + 13, colors, range),
+        "background_color": get_random_color(num_from_name + 13, colors, len(colors)),
         "wrapper_translate_x": wrapper_translate_x,
         "wrapper_translate_y": wrapper_translate_y,
         "wrapper_rotate": get_unit(num_from_name, 360),
