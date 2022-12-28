@@ -22,9 +22,9 @@ def generate_colors(name, colors):
     ]
 
 
-def ring(name, colors, square):
+def ring(name, colors, size, square):
     ring_colors = generate_colors(name, colors)
     return render(
         "ring.svg",
-        {"ring_colors": ring_colors, "SIZE": SIZE, "size": "80", "square": square},
+        {"ring_colors": ring_colors, "SIZE": SIZE, "size": size, "square": square},
     )

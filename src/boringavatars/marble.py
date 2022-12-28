@@ -19,9 +19,9 @@ def generate_colors(name, colors):
     ]
 
 
-def marble(name, colors, square):
+def marble(name, colors, size, square):
     properties = generate_colors(name, colors)
     return render(
         "marble.svg",
-        {"properties": properties, "SIZE": SIZE, "size": "80", "square": square},
+        {"properties": properties, "SIZE": SIZE, "size": size, "square": square},
     )

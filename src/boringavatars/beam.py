@@ -44,9 +44,9 @@ def generate_data(name, colors):
     }
 
 
-def beam(name, colors, square):
+def beam(name, colors, size, square):
     context = generate_data(name, colors)
     context["SIZE"] = SIZE
-    context["size"] = 80
+    context["size"] = size
     context["square"] = square
     return render("beam.svg", context)

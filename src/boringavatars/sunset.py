@@ -14,7 +14,7 @@ def generate_colors(name, colors):
     ]
 
 
-def sunset(name, colors, square):
+def sunset(name, colors, size, square):
     sunset_colors = generate_colors(name, colors)
     name = hashlib.sha1(name.encode("utf-8")).hexdigest()
     return render(
@@ -23,7 +23,7 @@ def sunset(name, colors, square):
             "sunset_colors": sunset_colors,
             "name": name,
             "SIZE": SIZE,
-            "size": "80",
+            "size": size,
             "square": square,
         },
     )
