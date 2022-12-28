@@ -21,10 +21,10 @@ VARIANTS = {
 }
 
 
-def avatar(name, colors=DEFAULT_COLORS, variant="beam"):
+def avatar(name, colors=DEFAULT_COLORS, variant="beam", square=False):
     if variant not in VARIANTS:
         raise ValueError(f"unrecognized variant: {variant}")
 
     fn = VARIANTS[variant]
     colors = [c.lstrip("#") for c in colors]
-    return fn(name, colors)
+    return fn(name, colors=colors, square=square)

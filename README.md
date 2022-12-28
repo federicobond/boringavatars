@@ -17,7 +17,12 @@ pip install boringavatars
 from boringavatars import avatar
 
 # returns the string corresponding to the generated SVG
-avatar("Maria Mitchell", variant="marble", colors=["92A1C6", "146A7C", "F0AB3D", "C271B4", "C20D90"])
+avatar(
+    "Maria Mitchell",
+    variant="marble",
+    colors=["92A1C6", "146A7C", "F0AB3D", "C271B4", "C20D90"],
+    square=True
+)
 ```
 
 ## License

@@ -7,7 +7,7 @@
   height="{{ size }}"
 >
   <mask id="mask__beam" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
-    <rect width="{{ SIZE }}" height="{{ SIZE }}" fill="#FFFFFF" />
+    <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>
   <g mask="url(#mask__beam)">
     <rect width="{{ SIZE }}" height="{{ SIZE }}" fill="#{{ background_color }}" />

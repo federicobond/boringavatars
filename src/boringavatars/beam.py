@@ -34,10 +34,12 @@ def generate_data(name, colors):
         "face_translate_y": wrapper_translate_y / 2
         if wrapper_translate_y > SIZE / 6
         else get_unit(num_from_name, 7, 2),
-        "SIZE": SIZE,
-        "size": 80,
     }
 
 
-def beam(name, colors):
-    return render("beam.svg", generate_data(name, colors))
+def beam(name, colors, square):
+    context = generate_data(name, colors)
+    context["SIZE"] = SIZE
+    context["size"] = 80
+    context["square"] = square
+    return render("beam.svg", context)

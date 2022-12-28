@@ -6,7 +6,9 @@ COLORS = 5
 
 def generate_colors(name, colors):
     num_from_name = hash(name)
-    colors_shuffle = [get_random_color(num_from_name + i, colors, len(colors)) for i in range(COLORS)]
+    colors_shuffle = [
+        get_random_color(num_from_name + i, colors, len(colors)) for i in range(COLORS)
+    ]
     return [
         colors_shuffle[0],
         colors_shuffle[1],
@@ -20,6 +22,9 @@ def generate_colors(name, colors):
     ]
 
 
-def ring(name, colors):
+def ring(name, colors, square):
     ring_colors = generate_colors(name, colors)
-    return render("ring.svg", {"ring_colors": ring_colors, "SIZE": SIZE, "size": "80"})
+    return render(
+        "ring.svg",
+        {"ring_colors": ring_colors, "SIZE": SIZE, "size": "80", "square": square},
+    )

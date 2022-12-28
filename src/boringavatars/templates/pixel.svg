@@ -15,7 +15,7 @@
     width="{{ SIZE }}"
     height="{{ SIZE }}"
   >
-    <rect width="{{ SIZE }}" height="{{ SIZE }}" fill="#FFFFFF" />
+    <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>
   <g mask="url(#mask__pixel)">
     <rect width="10" height="10" fill="#{{ pixel_colors[0] }}" />
