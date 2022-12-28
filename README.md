@@ -21,7 +21,9 @@ avatar(
     "Maria Mitchell",
     variant="marble",
     colors=["92A1C6", "146A7C", "F0AB3D", "C271B4", "C20D90"],
-    square=True
+    title=False,
+    size=40,
+    square=True,
 )
 ```
 
