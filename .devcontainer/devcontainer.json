@@ -1,0 +1,43 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"editor.trimAutoWhitespace": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"files.trimTrailingWhitespace": true,
+		"files.autoSave": "onFocusChange",
+		"python.analysis.typeCheckingMode": "strict",
+		// "python.defaultInterpreterPath": "/opt/conda/bin/python",
+		// "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+		// "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+		"python.formatting.blackArgs": [
+			"--config",
+			"pyproject.toml"
+		],
+		"python.formatting.provider": "black",
+		"python.linting.enabled": true,
+		"python.linting.lintOnSave": true,
+		"python.linting.flake8Enabled": true,
+		"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+		"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-python.pylint",
+		"ms-python.black-formatter",
+		"ms-vsliveshare.vsliveshare",
+		"ryanluker.vscode-coverage-gutters",
+		"bungcip.better-toml"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip install -r requirements.txt"
+}

@@ -1,0 +1,57 @@
+<svg
+  viewBox="0 0 {{ SIZE }} {{ SIZE }}"
+  fill="none"
+  role="img"
+  xmlns="http://www.w3.org/2000/svg"
+  width="{{ size }}"
+  height="{{ size }}"
+>
+  <mask id="mask__beam" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
+    <rect width="{{ SIZE }}" height="{{ SIZE }}" fill="#FFFFFF" />
+  </mask>
+  <g mask="url(#mask__beam)">
+    <rect width="{{ SIZE }}" height="{{ SIZE }}" fill="#{{ background_color }}" />
+    <rect
+      x="0"
+      y="0"
+      width="{{ SIZE }}"
+      height="{{ SIZE }}"
+      transform="translate({{ wrapper_translate_x }} {{ wrapper_translate_y }}) rotate({{ wrapper_rotate }} {{ SIZE / 2 }} {{ SIZE / 2 }}) scale({{ wrapper_scale }})"
+      fill="#{{ wrapper_color }}"
+      rx="{% if is_circle %}{{ SIZE }}{% else %}{{ SIZE / 6 }}{% endif %}"
+    />
+    <g transform="translate({{ face_translate_x }} {{ face_translate_y }}) rotate({{ face_rotate }} {{ SIZE / 2 }} {{ SIZE / 2 }})">
+      {% if is_mouth_open %}
+        <path
+          d="M15 {{ 19 + mouth_spread }}c2 1 4 1 6 0"
+          stroke="#{{ face_color }}"
+          fill="none"
+          strokeLinecap="round"
+        />
+      {% else %}
+        <path
+          d="M13,{{ 19 + mouth_spread }} a1,0.75 0 0,0 10,0"
+          fill="{{ face_color }}"
+        />
+      {% endif %}
+      <rect
+        x="{{ 14 - eye_spread }}"
+        y="14"
+        width="1.5"
+        height="2"
+        rx="1"
+        stroke="none"
+        fill="{{ face_color }}"
+      />
+      <rect
+        x="{{ 20 + eye_spread }}"
+        y="14"
+        width="1.5"
+        height="2"
+        rx="1"
+        stroke="none"
+        fill="{{ face_color }}"
+      />
+    </g>
+  </g>
+</svg>
