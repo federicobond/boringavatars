@@ -12,9 +12,16 @@ def generate_colors(name, colors):
     ]
 
 
-def pixel(name, colors, size, square):
+def pixel(name, *, colors, size, title, square):
     pixel_colors = generate_colors(name, colors)
     return render(
         "pixel.svg",
-        {"pixel_colors": pixel_colors, "SIZE": SIZE, "size": size, "square": square},
+        {
+            "name": name,
+            "pixel_colors": pixel_colors,
+            "SIZE": SIZE,
+            "size": size,
+            "title": title,
+            "square": square,
+        },
     )

@@ -6,6 +6,7 @@
   width="{{ size }}"
   height="{{ size }}"
 >
+  {% if title %}<title>{{ name }}</title>{% endif %}
   <mask id="mask__sunset" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
     <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>

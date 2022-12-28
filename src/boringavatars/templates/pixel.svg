@@ -6,6 +6,7 @@
   width="{{ size }}"
   height="{{ size }}"
 >
+  {% if title %}<title>{{ name }}</title>{% endif %}
   <mask
     id="mask__pixel"
     mask-type="alpha"

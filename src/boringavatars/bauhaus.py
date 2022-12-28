@@ -19,14 +19,16 @@ def generate_colors(name, colors):
     ]
 
 
-def bauhaus(name, colors, size, square):
+def bauhaus(name, *, colors, size, title, square):
     properties = generate_colors(name, colors)
     return render(
         "bauhaus.svg",
         {
+            "name": name,
             "properties": properties,
             "SIZE": SIZE,
             "size": size,
+            "title": title,
             "square": square,
         },
     )

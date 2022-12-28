@@ -14,16 +14,17 @@ def generate_colors(name, colors):
     ]
 
 
-def sunset(name, colors, size, square):
+def sunset(name, *, colors, size, title, square):
     sunset_colors = generate_colors(name, colors)
     name = hashlib.sha1(name.encode("utf-8")).hexdigest()
     return render(
         "sunset.svg",
         {
-            "sunset_colors": sunset_colors,
             "name": name,
+            "sunset_colors": sunset_colors,
             "SIZE": SIZE,
             "size": size,
+            "title": title,
             "square": square,
         },
     )
