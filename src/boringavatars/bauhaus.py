@@ -1,11 +1,11 @@
-from .utils import get_boolean, get_random_color, get_unit, render
+from .utils import hash_code, get_boolean, get_random_color, get_unit, render
 
 ELEMENTS = 4
 SIZE = 80
 
 
 def generate_colors(name, colors):
-    num_from_name = hash(name)
+    num_from_name = hash_code(name)
 
     return [
         {

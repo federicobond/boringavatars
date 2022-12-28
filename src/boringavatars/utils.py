@@ -1,7 +1,12 @@
+import hashlib
 import math
 import os.path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def hash_code(name):
+    return int.from_bytes(hashlib.sha1(name.encode("utf-8")).digest())
 
 
 def get_digit(number, ntn):

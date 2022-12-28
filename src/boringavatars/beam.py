@@ -1,10 +1,17 @@
-from .utils import get_boolean, get_contrast, get_random_color, get_unit, render
+from .utils import (
+    hash_code,
+    get_boolean,
+    get_contrast,
+    get_random_color,
+    get_unit,
+    render,
+)
 
 SIZE = 36
 
 
 def generate_data(name, colors):
-    num_from_name = hash(name)
+    num_from_name = hash_code(name)
     wrapper_color = get_random_color(num_from_name, colors, len(colors))
     pre_translate_x = get_unit(num_from_name, 10, 1)
     wrapper_translate_x = (

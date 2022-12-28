@@ -1,11 +1,11 @@
-from .utils import get_random_color, get_unit, render
+from .utils import hash_code, get_random_color, get_unit, render
 
 SIZE = 90
 COLORS = 5
 
 
 def generate_colors(name, colors):
-    num_from_name = hash(name)
+    num_from_name = hash_code(name)
     colors_shuffle = [
         get_random_color(num_from_name + i, colors, len(colors)) for i in range(COLORS)
     ]
