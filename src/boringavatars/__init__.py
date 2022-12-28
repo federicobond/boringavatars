@@ -21,7 +21,7 @@ VARIANTS = {
 }
 
 
-def avatar(name, colors=DEFAULT_COLORS, variant="beam", square=False):
+def avatar(name, colors=DEFAULT_COLORS, variant="marble", square=False):
     if variant not in VARIANTS:
         raise ValueError(f"unrecognized variant: {variant}")
 
