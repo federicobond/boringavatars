@@ -7,7 +7,7 @@ SIZE = 80
 def generate_colors(name, colors):
     num_from_name = hash_code(name)
     return [
-        get_random_color(num_from_name + i, colors, len(colors))
+        get_random_color(num_from_name % (i + 1), colors, len(colors))
         for i in range(ELEMENTS)
     ]
 
