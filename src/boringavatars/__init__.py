@@ -22,8 +22,15 @@ VARIANTS = {
 
 
 def avatar(
-    name, *, colors=DEFAULT_COLORS, variant="marble", title=False, size=40, square=False
-):
+    name: str,
+    *,
+    colors: [str] = DEFAULT_COLORS,
+    variant: str = "marble",
+    title: bool = False,
+    size: int = 40,
+    square: bool = False,
+) -> str:
+    """Generate an avatar SVG string with the given parameters."""
     if variant not in VARIANTS:
         raise ValueError(f"unrecognized variant: {variant}")
 
