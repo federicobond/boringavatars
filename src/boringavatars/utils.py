@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 def hash_code(name):
-    return int.from_bytes(hashlib.sha1(name.encode("utf-8")).digest())
+    return int.from_bytes(hashlib.sha1(name.encode("utf-8")).digest(), byteorder="big")
 
 
 def get_digit(number, ntn):
