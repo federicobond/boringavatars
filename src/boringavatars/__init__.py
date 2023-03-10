@@ -24,7 +24,7 @@ VARIANTS = {
 def avatar(
     name: str,
     *,
-    colors: [str] = DEFAULT_COLORS,
+    colors: list[str] = DEFAULT_COLORS,
     variant: str = "marble",
     title: bool = False,
     size: int = 40,
