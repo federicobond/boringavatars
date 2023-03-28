@@ -27,7 +27,7 @@
           d="M15 {{ 19 + mouth_spread }}c2 1 4 1 6 0"
           stroke="{{ face_color }}"
           fill="none"
-          strokeLinecap="round"
+          stroke-linecap="round"
         />
       {% else %}
         <path
