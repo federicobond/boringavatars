@@ -10,7 +10,7 @@ def hash_code(name):
 
 
 def get_digit(number, ntn):
-    return math.floor((number / math.pow(10, ntn)) % 10)
+    return math.floor((number // int(math.pow(10, ntn))) % 10)
 
 
 def get_boolean(number, ntn):
