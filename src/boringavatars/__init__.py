@@ -1,3 +1,5 @@
+from typing import Any, Callable, Dict, Sequence
+
 from .bauhaus import bauhaus
 from .beam import beam
 from .marble import marble
@@ -11,7 +13,7 @@ __all__ = ["avatar"]
 
 DEFAULT_COLORS = ["FFAD08", "EDD75A", "73B06F", "0C8F8F", "405059"]
 
-VARIANTS = {
+VARIANTS: Dict[str, Callable[..., str]] = {
     "beam": beam,
     "marble": marble,
     "pixel": pixel,
@@ -24,7 +26,7 @@ VARIANTS = {
 def avatar(
     name: str,
     *,
-    colors: list[str] = DEFAULT_COLORS,
+    colors: Sequence[str] = DEFAULT_COLORS,
     variant: str = "marble",
     title: bool = False,
     size: int = 40,
