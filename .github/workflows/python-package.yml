@@ -30,4 +30,4 @@ jobs:
       - name: Run mypy type checking
         run: mypy src tests
       - name: Run tests
-        run: python -m unittest discover -v tests
+        run: PYTHONPATH=src python -m unittest discover -v tests
