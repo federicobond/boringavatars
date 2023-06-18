@@ -1,4 +1,4 @@
-from typing import Any, Callable, Dict, Sequence
+from typing import Callable, Dict, Sequence
 
 from .bauhaus import bauhaus
 from .beam import beam
