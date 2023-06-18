@@ -16,6 +16,7 @@ repos:
       - id: mixed-line-ending
       - id: requirements-txt-fixer
       - id: trailing-whitespace
+        exclude: ^tests/snapshots/
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: "v0.0.269"
@@ -27,6 +28,7 @@ repos:
     rev: "23.3.0"
     hooks:
       - id: black
+        exclude: ^tests/snapshots/
 
   - repo: https://github.com/mgedmin/check-manifest
     rev: "0.47"

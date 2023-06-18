@@ -1,26 +1,33 @@
+from snapshottest import TestCase
 import unittest
 
 from boringavatars import avatar
 
 
-class AvatarTests(unittest.TestCase):
+class AvatarTests(TestCase):
     def test_avatar_beam(self):
-        avatar("foobar", variant="beam")
+        out = avatar("foobar", variant="beam")
+        self.assertMatchSnapshot(out)
 
     def test_avatar_marble(self):
-        avatar("foobar", variant="marble")
+        out = avatar("foobar", variant="marble")
+        self.assertMatchSnapshot(out)
 
     def test_avatar_pixel(self):
-        avatar("foobar", variant="pixel")
+        out = avatar("foobar", variant="pixel")
+        self.assertMatchSnapshot(out)
 
     def test_avatar_sunset(self):
-        avatar("foobar", variant="sunset")
+        out = avatar("foobar", variant="sunset")
+        self.assertMatchSnapshot(out)
 
     def test_avatar_bauhaus(self):
-        avatar("foobar", variant="bauhaus")
+        out = avatar("foobar", variant="bauhaus")
+        self.assertMatchSnapshot(out)
 
     def test_avatar_ring(self):
-        avatar("foobar", variant="ring")
+        out = avatar("foobar", variant="ring")
+        self.assertMatchSnapshot(out)
 
 
 if __name__ == "__main__":

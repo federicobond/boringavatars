@@ -44,3 +44,13 @@ name = "boringavatars"
 executionEnvironments = [
   { root = "src" }
 ]
+
+[tool.ruff]
+exclude = ["tests/snapshots"]
+
+[tool.black]
+exclude = "tests/snapshots"
+
+executionEnvironments = [
+  { root = "src" }
+]
