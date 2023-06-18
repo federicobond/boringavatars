@@ -7,7 +7,7 @@ from .pixel import pixel
 from .ring import ring
 from .sunset import sunset
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 __all__ = ["avatar"]
 
