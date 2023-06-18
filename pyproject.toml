@@ -19,21 +19,18 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11"
 ]
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 dynamic = ["version"]
 dependencies = [
     "Jinja2>=3.0.0",
 ]
+source = ["."]
 
 [project.optional-dependencies]
 test = [
     "black==22.1.0",
     "check-manifest==0.48",
     "pre-commit==2.17.0",
-    "pytest-cov==3.0.0",
-    "pytest-runner",
-    "pytest==7.1.0",
-    "pytest-github-actions-annotate-failures",
 ]
 
 [project.urls]
@@ -47,9 +44,3 @@ name = "boringavatars"
 executionEnvironments = [
   { root = "src" }
 ]
-
-[tool.pytest.ini_options]
-pythonpath = [
-  "src"
-]
-testpaths = "tests"
