@@ -54,3 +54,11 @@ exclude = "tests/snapshots"
 executionEnvironments = [
   { root = "src" }
 ]
+
+[[tool.mypy.overrides]]
+module = 'snapshottest'
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = 'jinja2'
+ignore_missing_imports = true
