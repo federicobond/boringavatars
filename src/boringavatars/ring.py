@@ -1,4 +1,4 @@
-from .utils import hash_code, get_random_color, get_unit, render
+from .utils import hash_code, get_random_color, render
 
 SIZE = 90
 COLORS = 5
