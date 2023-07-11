@@ -1,4 +1,4 @@
-from .utils import hash_code, get_random_color, get_unit, render
+from .utils import get_random_color, get_unit, hash_code, render
 
 ELEMENTS = 3
 SIZE = 80

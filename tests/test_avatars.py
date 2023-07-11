@@ -1,7 +1,7 @@
-from snapshottest import TestCase
 import unittest
 
 from boringavatars import avatar
+from snapshottest import TestCase
 
 
 class AvatarTests(TestCase):

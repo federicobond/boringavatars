@@ -1,6 +1,6 @@
 import hashlib
 
-from .utils import hash_code, get_random_color, render
+from .utils import get_random_color, hash_code, render
 
 ELEMENTS = 4
 SIZE = 80

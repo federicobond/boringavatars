@@ -1,9 +1,9 @@
 from .utils import (
-    hash_code,
     get_boolean,
     get_contrast,
     get_random_color,
     get_unit,
+    hash_code,
     render,
 )
 
