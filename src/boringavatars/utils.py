@@ -1,6 +1,6 @@
 import hashlib
 import math
-import os.path
+from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -51,7 +51,7 @@ def get_contrast(hexcolor):
     return "#000000" if yiq >= 128 else "#FFFFFF"
 
 
-template_path = os.path.join(os.path.dirname(__file__), "templates")
+template_path = Path(__file__).parent / "templates"
 env = Environment(
     loader=FileSystemLoader(template_path), autoescape=select_autoescape()
 )
