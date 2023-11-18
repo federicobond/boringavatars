@@ -7,7 +7,7 @@ name =  "boringavatars"
 authors = [
     {name = "Federico Bond", email = "federicobond@gmail.com"},
 ]
-description = ""
+description = "A Python port of the boring-avatars JS library."
 readme = "README.md"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
