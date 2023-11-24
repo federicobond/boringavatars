@@ -8,7 +8,7 @@
 >
   {% if title %}<title>{{ name }}</title>{% endif %}
   <mask
-    id="mask__pixel"
+    id="{{ mask_id }}"
     mask-type="alpha"
     maskUnits="userSpaceOnUse"
     x="0"
@@ -18,7 +18,7 @@
   >
     <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>
-  <g mask="url(#mask__pixel)">
+  <g mask="url(#{{ mask_id }})">
     <rect width="10" height="10" fill="#{{ pixel_colors[0] }}" />
     <rect x="20" width="10" height="10" fill="#{{ pixel_colors[1] }}" />
     <rect x="40" width="10" height="10" fill="#{{ pixel_colors[2] }}" />

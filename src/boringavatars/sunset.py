@@ -1,6 +1,6 @@
 import hashlib
 
-from .utils import get_random_color, hash_code, render
+from .utils import get_random_color, hash_code, random_id, render
 
 ELEMENTS = 4
 SIZE = 80
@@ -21,6 +21,7 @@ def sunset(name, *, colors, size, title, square):
         "sunset.svg",
         {
             "name": name,
+            "mask_id": random_id(),
             "sunset_colors": sunset_colors,
             "SIZE": SIZE,
             "size": size,

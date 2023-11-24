@@ -1,3 +1,4 @@
+import random
 import unittest
 
 from boringavatars import avatar
@@ -5,6 +6,9 @@ from snapshottest import TestCase
 
 
 class AvatarTests(TestCase):
+    def setUp(self):
+        random.seed(13)  # used for consistent mask ids
+
     def test_avatar_beam(self):
         out = avatar("foobar", variant="beam")
         self.assertMatchSnapshot(out)

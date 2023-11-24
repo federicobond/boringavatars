@@ -7,10 +7,10 @@
   height="{{ size }}"
 >
   {% if title %}<title>{{ name }}</title>{% endif %}
-  <mask id="mask__ring" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
+  <mask id="{{ mask_id }}" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
     <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>
-  <g mask="url(#mask__ring)">
+  <g mask="url(#{{ mask_id }})">
     <path d="M0 0h90v45H0z" fill="#{{ ring_colors[0] }}" />
     <path d="M0 45h90v45H0z" fill="#{{ ring_colors[1] }}" />
     <path d="M83 45a38 38 0 00-76 0h76z" fill="#{{ ring_colors[2] }}" />

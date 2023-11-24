@@ -1,8 +1,13 @@
 import hashlib
 import math
+import random
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def random_id():
+    return f":{random.randbytes(4).hex()}:"
 
 
 def hash_code(name):

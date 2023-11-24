@@ -1,4 +1,4 @@
-from .utils import get_random_color, get_unit, hash_code, render
+from .utils import get_random_color, get_unit, hash_code, random_id, render
 
 ELEMENTS = 3
 SIZE = 80
@@ -26,6 +26,7 @@ def marble(name, *, colors, size, title, square):
         {
             "name": name,
             "properties": properties,
+            "mask_id": random_id(),
             "SIZE": SIZE,
             "size": size,
             "title": title,

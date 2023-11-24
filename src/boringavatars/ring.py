@@ -1,4 +1,4 @@
-from .utils import get_random_color, hash_code, render
+from .utils import get_random_color, hash_code, random_id, render
 
 SIZE = 90
 COLORS = 5
@@ -28,6 +28,7 @@ def ring(name, *, colors, size, title, square):
         "ring.svg",
         {
             "name": name,
+            "mask_id": random_id(),
             "ring_colors": ring_colors,
             "SIZE": SIZE,
             "size": size,

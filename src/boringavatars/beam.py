@@ -4,6 +4,7 @@ from .utils import (
     get_random_color,
     get_unit,
     hash_code,
+    random_id,
     render,
 )
 
@@ -47,6 +48,7 @@ def generate_data(name, colors):
 def beam(name, *, colors, size, title, square):
     context = generate_data(name, colors)
     context["name"] = name
+    context["mask_id"] = random_id()
     context["SIZE"] = SIZE
     context["size"] = size
     context["title"] = title

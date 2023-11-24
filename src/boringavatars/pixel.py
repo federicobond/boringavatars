@@ -1,4 +1,4 @@
-from .utils import get_random_color, hash_code, render
+from .utils import get_random_color, hash_code, random_id, render
 
 ELEMENTS = 64
 SIZE = 80
@@ -18,6 +18,7 @@ def pixel(name, *, colors, size, title, square):
         "pixel.svg",
         {
             "name": name,
+            "mask_id": random_id(),
             "pixel_colors": pixel_colors,
             "SIZE": SIZE,
             "size": size,

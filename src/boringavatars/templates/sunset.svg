@@ -7,10 +7,10 @@
   height="{{ size }}"
 >
   {% if title %}<title>{{ name }}</title>{% endif %}
-  <mask id="mask__sunset" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
+  <mask id="{{ mask_id }}" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
     <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>
-  <g mask="url(#mask__sunset)">
+  <g mask="url(#{{ mask_id }})">
     <path fill="url(#gradient_paint0_linear_{{ name }})" d="M0 0h80v40H0z" />
     <path fill="url(#gradient_paint1_linear_{{ name }})" d="M0 40h80v40H0z" />
   </g>

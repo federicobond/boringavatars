@@ -7,10 +7,10 @@
   height="{{ size }}"
 >
   {% if title %}<title>{{ name }}</title>{% endif %}
-  <mask id="mask__beam" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
+  <mask id="{{ mask_id }}" maskUnits="userSpaceOnUse" x="0" y="0" width="{{ SIZE }}" height="{{ SIZE }}">
     <rect width="{{ SIZE }}" height="{{ SIZE }}" {% if not square %}rx="{{ SIZE * 2 }}"{% endif %} fill="#FFFFFF" />
   </mask>
-  <g mask="url(#mask__beam)">
+  <g mask="url(#{{ mask_id }})">
     <rect width="{{ SIZE }}" height="{{ SIZE }}" fill="#{{ background_color }}" />
     <rect
       x="0"
