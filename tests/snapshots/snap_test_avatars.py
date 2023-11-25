@@ -16,10 +16,10 @@ snapshots['AvatarTests::test_avatar_bauhaus 1'] = '''<svg
   height="40"
 >
   
-  <mask id=":7b614e42:" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+  <mask id=":qQQ0lo:" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
     <rect width="80" height="80" rx="160" fill="#FFFFFF" />
   </mask>
-  <g mask="url(#:7b614e42:)">
+  <g mask="url(#:qQQ0lo:)">
     <rect width="80" height="80" fill="#405059" />
     <rect
       x="10.0"
@@ -57,10 +57,10 @@ snapshots['AvatarTests::test_avatar_beam 1'] = '''<svg
   height="40"
 >
   
-  <mask id=":7b614e42:" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+  <mask id=":qQQ0lo:" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
     <rect width="36" height="36" rx="72" fill="#FFFFFF" />
   </mask>
-  <g mask="url(#:7b614e42:)">
+  <g mask="url(#:qQQ0lo:)">
     <rect width="36" height="36" fill="#73B06F" />
     <rect
       x="0"
@@ -111,10 +111,10 @@ snapshots['AvatarTests::test_avatar_marble 1'] = '''<svg
    height="40"
 >
    
-   <mask id=":7b614e42:" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+   <mask id=":qQQ0lo:" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
      <rect width="80" height="80" rx="160" fill="#FFFFFF" />
    </mask>
-   <g mask="url(#:7b614e42:)">
+   <g mask="url(#:qQQ0lo:)">
      <rect width="80" height="80" fill="#405059" />
      <path
        filter="url(#prefix__filter0_f)"
@@ -153,7 +153,7 @@ snapshots['AvatarTests::test_avatar_pixel 1'] = '''<svg
 >
   
   <mask
-    id=":7b614e42:"
+    id=":qQQ0lo:"
     mask-type="alpha"
     maskUnits="userSpaceOnUse"
     x="0"
@@ -163,7 +163,7 @@ snapshots['AvatarTests::test_avatar_pixel 1'] = '''<svg
   >
     <rect width="80" height="80" rx="160" fill="#FFFFFF" />
   </mask>
-  <g mask="url(#:7b614e42:)">
+  <g mask="url(#:qQQ0lo:)">
     <rect width="10" height="10" fill="#FFAD08" />
     <rect x="20" width="10" height="10" fill="#FFAD08" />
     <rect x="40" width="10" height="10" fill="#EDD75A" />
@@ -240,10 +240,10 @@ snapshots['AvatarTests::test_avatar_ring 1'] = '''<svg
   height="40"
 >
   
-  <mask id=":7b614e42:" maskUnits="userSpaceOnUse" x="0" y="0" width="90" height="90">
+  <mask id=":qQQ0lo:" maskUnits="userSpaceOnUse" x="0" y="0" width="90" height="90">
     <rect width="90" height="90" rx="180" fill="#FFFFFF" />
   </mask>
-  <g mask="url(#:7b614e42:)">
+  <g mask="url(#:qQQ0lo:)">
     <path d="M0 0h90v45H0z" fill="#405059" />
     <path d="M0 45h90v45H0z" fill="#FFAD08" />
     <path d="M83 45a38 38 0 00-76 0h76z" fill="#FFAD08" />
@@ -265,10 +265,10 @@ snapshots['AvatarTests::test_avatar_sunset 1'] = '''<svg
   height="40"
 >
   
-  <mask id=":7b614e42:" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+  <mask id=":qQQ0lo:" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
     <rect width="80" height="80" rx="160" fill="#FFFFFF" />
   </mask>
-  <g mask="url(#:7b614e42:)">
+  <g mask="url(#:qQQ0lo:)">
     <path fill="url(#gradient_paint0_linear_8843d7f92416211de9ebb963ff4ce28125932878)" d="M0 0h80v40H0z" />
     <path fill="url(#gradient_paint1_linear_8843d7f92416211de9ebb963ff4ce28125932878)" d="M0 40h80v40H0z" />
   </g>

@@ -1,13 +1,18 @@
 import hashlib
 import math
+import string
 import random
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
+_alphabet = string.ascii_letters + string.digits
+
+
 def random_id():
-    return f":{random.randbytes(4).hex()}:"
+    ident = "".join(random.choices(_alphabet, k=6))
+    return f":{ident}:"
 
 
 def hash_code(name):
