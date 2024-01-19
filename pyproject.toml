@@ -38,10 +38,6 @@ Documentation = "https://github.com/federicobond/boringavatars"
 Source = "https://github.com/federicobond/boringavatars"
 Tracker = "https://github.com/federicobond/boringavatars"
 
-executionEnvironments = [
-  { root = "src" }
-]
-
 [tool.ruff]
 exclude = ["tests/snapshots"]
 
@@ -64,3 +60,12 @@ ignore_missing_imports = true
 
 [tool.hatch.version]
 path = "src/boringavatars/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  ".gitignore",
+  ".github",
+  ".vscode",
+  ".devcontainer",
+  ".pre-commit-config.yaml",
+]
