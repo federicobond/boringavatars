@@ -61,3 +61,6 @@ module = 'jinja2'
 ignore_missing_imports = true
 
 [tool.hatch]
+
+[tool.hatch.version]
+path = "src/boringavatars/__init__.py"
