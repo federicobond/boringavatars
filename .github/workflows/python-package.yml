@@ -10,6 +10,21 @@ on:
     branches: ["main"]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Lint with pre-commit
+        run: pre-commit run --all-files
+      - name: Run mypy type checking
+        run: mypy src tests
+
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -25,9 +40,5 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Lint with pre-commit
-        run: pre-commit run --all-files
-      - name: Run mypy type checking
-        run: mypy src tests
       - name: Run tests
         run: PYTHONPATH=src python -m unittest discover -v tests
