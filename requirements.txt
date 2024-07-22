@@ -1,4 +1,4 @@
 black==24.4.2
 Jinja2>=3.0.0
-mypy==1.10.1
+mypy==1.11.0
 snapshottest==0.6.0
