@@ -30,7 +30,7 @@ source = ["."]
 test = [
     "black==24.8.0",
     "check-manifest==0.50",
-    "pre-commit==4.0.1",
+    "pre-commit==4.1.0",
 ]
 
 [project.urls]
