@@ -28,7 +28,7 @@ source = ["."]
 
 [project.optional-dependencies]
 test = [
-    "black==24.8.0",
+    "black==25.1.0",
     "check-manifest==0.50",
     "pre-commit==4.1.0",
 ]
